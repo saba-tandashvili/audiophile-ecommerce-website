@@ -1,0 +1,52 @@
+.header{
+    height: 729px;
+    width: 100vw;
+    padding: 30px 10%;
+    background-image: url("src/assets/home/desktop/image-hero.jpg");
+    background-size:auto;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-color: #191919;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header::before{
+    content: "";
+    background-color: white;
+    height: 1px;
+    width: 100%;
+    opacity: 20%;
+    position: absolute;
+    left: 0;
+    bottom: -150%;
+}
+
+header img{
+    cursor: pointer;
+}
+
+header .middle{
+    display: flex;
+    gap: 30px;
+}
+
+header .middle a{
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header .new-product{
+    
+    height: 100%;
+    width: 100%;
+}
