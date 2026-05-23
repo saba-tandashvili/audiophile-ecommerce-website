@@ -54,6 +54,10 @@ header .middle a {
   cursor: pointer;
 }
 
+header .middle a:hover{
+  color: #D87D4A;
+}
+
 .header .new-product {
   height: 90vh;
   display: flex;
@@ -97,6 +101,10 @@ header .middle a {
   cursor: pointer;
 }
 
+.header .new-product button:hover{
+  background-color: #FBAF85;
+}
+
 .center {
   padding: 0 10%;
   display: flex;
@@ -104,14 +112,14 @@ header .middle a {
   gap: 150px;
 }
 
-.center .other-pages {
+.other-pages {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.center .other-pages .other {
+.other-pages .other {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -122,42 +130,47 @@ header .middle a {
   padding: 40px 0;
   gap: 20px;
   background-color: #f1f1f1;
+  cursor: pointer;
 }
 
-.center .other-pages .other .picture1 {
+.other-pages .other:hover .shop p{
+  color: #D87D4A;
+  opacity: 1;
+}
+
+.other-pages .other .picture1 {
   position: absolute;
   top: -37%;
   height: 180px;
   width: 180px;
 }
 
-.center .other-pages .other .picture2 {
+.other-pages .other .picture2 {
   position: absolute;
   top: -30%;
   height: 166px;
   width: 150px;
 }
 
-.center .other-pages .other .picture3 {
+.other-pages .other .picture3 {
   position: absolute;
   top: -30%;
   height: 166px;
   width: 190px;
 }
 
-.center .other-pages .other .shop {
+.other-pages .other .shop {
   display: flex;
   align-items: center;
   gap: 10px;
-  cursor: pointer;
 }
 
-.center .other-pages .other h3 {
+.other-pages .other h3 {
   font-size: 18px;
   letter-spacing: 1.29px;
 }
 
-.center .other-pages .other p {
+.other-pages .other p {
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 1px;
@@ -242,6 +255,10 @@ header .middle a {
   cursor: pointer;
 }
 
+.information .zx9 .right button:hover{
+  background-color: #4C4C4C;
+}
+
 .information .zx7 {
   height: 350px;
   width: 100%;
@@ -285,6 +302,11 @@ header .middle a {
   cursor: pointer;
 }
 
+.information .zx7 div button:hover{
+  background-color: black;
+  color: white;
+}
+
 .information .yx1 {
   display: flex;
   justify-content: space-between;
@@ -320,6 +342,11 @@ header .middle a {
   font-size: 13px;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+.information .yx1 div button:hover{
+  background-color: black;
+  color: white;
 }
 
 .description {
@@ -382,18 +409,22 @@ footer::before{
     top: 0;
 }
 
-footer .top .other-pages{
+footer .top .other-pages-footer{
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-footer .top .other-pages a{
+footer .top .other-pages-footer a{
     text-decoration: none;
     color: white;
     font-weight: 700;
     font-size: 13px;
     letter-spacing: 2px;
+}
+
+footer .top .other-pages-footer a:hover{
+  color: #D87D4A;
 }
 
 footer .bottom{
@@ -433,4 +464,331 @@ footer .bottom .right{
 
 footer .bottom .right *{
     cursor: pointer;
+}
+
+.header-headphones{
+  height: 336px;
+  width: 100%;
+  padding: 20px 10%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 125px;
+}
+
+.header-headphones h1{
+  margin: 0 auto;
+  color: white;
+  font-size: 40px;
+  letter-spacing: 1.43px;
+  font-weight: 600;
+}
+
+.information-headphones{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  padding: 10% 10%;
+}
+
+.information-headphones .headphone{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.information-headphones .headphone.reverse{
+  flex-direction: row-reverse;
+}
+
+.information-headphones .headphone img{
+  height: 560px;
+  width: 540px;
+  border-radius: 8px;
+}
+
+.information-headphones .headphone .right{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.information-headphones .headphone .right span{
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 10px;
+  color: #D87D4A;
+}
+
+.information-headphones .headphone .right h1{
+  font-size: 40px;
+  letter-spacing: 1.43px;
+  font-weight: 600;
+}
+
+.information-headphones .headphone .right p{
+  width: 445px;
+  font-size: 15px;
+  opacity: 50%;
+  line-height: 25px;
+}
+
+.information-headphones .headphone .right button{
+  height: 48px;
+  width: 160px;
+  background-color: #D87D4A;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.information-headphones .headphone .right button:hover{
+  background-color: #FBAF85;
+}
+
+.headphones-page .other-pages{
+  margin-bottom: 100px;
+}
+
+.headphones-page .description, .headphones-page .other-pages{
+  padding: 0 10%;
+}
+
+.mark2 .header{
+  height: 97px;
+  margin-bottom: 70px;
+}
+
+.mark2 h4{
+  padding: 0 10%;
+  opacity: 50%;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 70px;
+}
+
+.mark2 .product{
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.mark2 .product img{
+  height: 560px;
+  width: 540px;
+  border-radius: 8px;
+}
+
+.mark2 .product .info-product{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mark2 .product .info-product span{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 10px;
+  color: #D87D4A;
+}
+
+.mark2 .product .info-product h1{
+  font-size: 40px;
+  letter-spacing: 1.43px;
+  line-height: 44px;
+}
+
+.mark2 .product .info-product p{
+  width: 445px;
+  opacity: 50%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.mark2 .product .info-product h3{
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 1.29px;
+}
+
+.mark2 .product .info-product .buttons{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.mark2 .product .info-product .buttons .amount{
+  height: 48px;
+  width: 120px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3%;
+  text-align: center;
+}
+
+.mark2 .product .info-product .buttons .amount button{
+  border: none;
+  font-weight: 700;
+  opacity: 25%;
+  font-size: 13px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.mark2 .product .info-product .buttons .amount p{
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 100%;
+}
+
+.mark2 .product .info-product .buttons .cart{
+  height: 48px;
+  width: 160px;
+  background-color: #D87D4A;
+  font-weight: 700;
+  font-size: 13px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.mark2 .info{
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.mark2 .info .left{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mark2 .info .left h1{
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+}
+
+.mark2 .info .left p{
+  width: 635px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 50%;
+}
+
+.mark2 .info .right{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mark2 .info .right h1{
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: 1.14px;
+}
+
+.mark2 .info .right div{
+  display: flex;
+  gap: 20px;
+}
+
+.mark2 .info .right div span{
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  color: #D87D4A;
+}
+
+.mark2 .info .right div p{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  opacity: 50%;
+}
+
+.mark2 .images{
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.mark2 .images img{
+  border-radius: 9px;
+}
+
+.mark2 .images .left{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.mark2 .recommended{
+  padding: 0 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 200px;
+}
+
+.mark2 .recommended .other-products{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.mark2 .recommended .other-products .other-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.mark2 .recommended .other-products .other-product img{
+  width: 350px;
+  height: 318px;
+  border-radius: 8px;
+}
+
+.mark2 .recommended .other-products .other-product h1{
+  font-size: 24px;
+  letter-spacing: 1.71px;
+}
+
+.mark2 .recommended .other-products .other-product button{
+  height: 48px;
+  width: 160px;
+  border: none;
+  background-color: #D87D4A;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.mark2 .other-pages{
+  padding: 0 10%;
+  margin-bottom: 150px;
+}
+
+.mark2 .description{
+  padding: 0 10%;
 }

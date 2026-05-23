@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
       <div className="top">
         <img src={Logo} alt="" />
-        <div className="other-pages">
+        <div className="other-pages-footer">
           <Link to={"/"}>HOME</Link>
           <Link to={"/headphones"}>HEADPHONES</Link>
           <Link to={"/speakers"}>SPEAKERS</Link>
