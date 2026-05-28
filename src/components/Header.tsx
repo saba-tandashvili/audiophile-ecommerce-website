@@ -1,8 +1,11 @@
 import Logo from "../assets/shared/desktop/logo.svg"
 import Cart from "../assets/shared/desktop/icon-cart.svg"
 import { Link, useNavigate } from "react-router-dom"
+type HeaderProps = {
+    setShowCart?: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-export default function Header() {
+export default function Header({setShowCart}: HeaderProps) {
   const navigate = useNavigate()
 
   return (
@@ -16,7 +19,7 @@ export default function Header() {
         <Link to="/earphones">EARPHONES</Link>
       </div>
 
-      <img src={Cart} alt="Cart" />
+      <img src={Cart} alt="Cart" onClick={() => {setShowCart?.((prev) => !prev)}}/>
 
     </header>
   )

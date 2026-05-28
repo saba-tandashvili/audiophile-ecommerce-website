@@ -1,26 +1,28 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useState } from "react";
 import Data from "../data.json";
 import Header from "../components/Header";
 import OtherPages from "../components/OtherPages";
 import Footer from "../components/Footer";
 import Description from "../components/Description";
+import { useCart } from "../components/CartContext";
+import CartDiv from "../components/CartDiv";
 
-export default function Mark2() {
+export default function Product() {
   const navigate = useNavigate();
+  const { productname } = useParams();
+  const product = Data.find((p) => p.slug === productname) || Data[0];
   const [amount, setAmount] = useState(1);
-  function Minus() {
-    if (amount <= 1) {
-      return;
-    } else {
-      setAmount((prev) => prev - 1);
-    }
-  }
+  const { addToCart } = useCart();
+  const [showCart, setShowCart] = useState(false);
+
   return (
     <div className="mark2">
       <div className="header">
-        <Header />
+        <Header setShowCart={setShowCart} />
       </div>
+
+      <CartDiv showCart={showCart} setShowCart={setShowCart}/>
 
       <h4
         onClick={() => {
@@ -31,24 +33,24 @@ export default function Mark2() {
       </h4>
 
       <div className="product">
-        <img src={Data[3].image.desktop} alt="" />
+        <img src={product.image.desktop} alt="" />
 
         <div className="info-product">
-          <span>NEW PRODUCT</span>
-          <h1>
-            XX99 Mark II <br /> Headphones
-          </h1>
-          <p>
-            The new XX99 Mark II headphones is the pinnacle of pristine audio.
-            It redefines your premium headphone experience by reproducing the
-            balanced depth and precision of studio-quality sound.
-          </p>
-          <h3>{`$ ${Data[3].price * amount}`}</h3>
+          <span style={{ display: product.new ? "" : "none" }}>
+            NEW PRODUCT
+          </span>
+          <h1>{product.name.toLocaleUpperCase()}</h1>
+          <p>{product.description}</p>
+          <h3>{`$ ${product.price * amount}`}</h3>
           <div className="buttons">
             <div className="amount">
               <button
                 onClick={() => {
-                  Minus();
+                  if (amount <= 1) {
+                    return;
+                  } else {
+                    setAmount((prev) => prev - 1);
+                  }
                 }}
               >
                 -
@@ -62,7 +64,20 @@ export default function Mark2() {
                 +
               </button>
             </div>
-            <button className="cart">ADD TO CART</button>
+            <button
+              className="add"
+              onClick={() => {
+                addToCart({
+                  id: product.slug,
+                  name: product.name,
+                  cartName: product.cartName,
+                  price: product.price,
+                  image: product.image,
+                });
+              }}
+            >
+              ADD TO CART
+            </button>
           </div>
         </div>
       </div>
@@ -91,7 +106,7 @@ export default function Mark2() {
         <div className="right">
           <h1>IN THE BOX</h1>
 
-          {Data[3].includes.map((item) => (
+          {product.includes.map((item) => (
             <div>
               <span>{item.quantity}x</span>
               <p>{item.item}</p>
@@ -102,11 +117,11 @@ export default function Mark2() {
 
       <div className="images">
         <div className="left">
-          <img src={Data[3].gallery.first.desktop} alt="" />
-          <img src={Data[3].gallery.second.desktop} alt="" />
+          <img src={product.gallery.first.desktop} alt="" />
+          <img src={product.gallery.second.desktop} alt="" />
         </div>
         <div className="right">
-          <img src={Data[3].gallery.third.desktop} alt="" />
+          <img src={product.gallery.third.desktop} alt="" />
         </div>
       </div>
 
@@ -114,13 +129,19 @@ export default function Mark2() {
         <h1>YOU MAY ALSO LIKE</h1>
 
         <div className="other-products">
-        {Data[3].others.map((product) => (
+          {product.others.map((product) => (
             <div className="other-product">
               <img src={product.image.desktop} alt="" />
               <h1>{product.name}</h1>
-              <button onClick={() => {navigate(`/${product.slug}`)}}>SEE PRODUCT</button>
-          </div>
-        ))}
+              <button
+                onClick={() => {
+                  navigate(`/${product.slug}`);
+                }}
+              >
+                SEE PRODUCT
+              </button>
+            </div>
+          ))}
         </div>
       </div>
 

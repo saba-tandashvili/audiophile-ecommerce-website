@@ -1,14 +1,14 @@
 import "./index.css";
 import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { CartProvider } from "./components/CartContext";
+
 import Home from "./pages/Home";
 import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
-import Mark2 from "./pages/Mark2";
+import Product from "./pages/Product";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -29,12 +29,16 @@ export default function App() {
       element: <Earphones />,
     },
     {
-      path: "/xx99-mark-two-headphones",
-      element: <Mark2 />,
+      path: "/:productname",
+      element: <Product />,
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <CartProvider>
+      <RouterProvider router={router} />
+    </CartProvider>
+  );
 }
 
 createRoot(document.getElementById("root")!).render(<App />);

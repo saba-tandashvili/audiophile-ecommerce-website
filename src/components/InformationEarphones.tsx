@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom"
 import xx99mtwo from "../assets/product-yx1-earphones/desktop/image-product.jpg"
+import Data from "../data.json"
 
 export default function InformationEarphones() {
+  const navigate = useNavigate()
   return (
     <div className="information-headphones">
       <div className="headphone">
@@ -10,7 +13,7 @@ export default function InformationEarphones() {
           <span>NEW PRODUCT</span>
           <h1>YX1 WIRELESS <br /> EARPHONES</h1>
           <p>Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.</p>
-          <button>SEE PRODUCT</button>
+          <button onClick={() => {navigate(`/${Data[0].slug}`)}}>SEE PRODUCT</button>
         </div>
       </div>
     </div>
