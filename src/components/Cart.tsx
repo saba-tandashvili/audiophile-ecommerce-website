@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "./CartContext";
 
 type CartProps = {
@@ -6,6 +7,7 @@ type CartProps = {
 };
 
 export default function Cart({ showCart }: CartProps) {
+  const navigate = useNavigate();
   const { cartItems, removeFromCart } = useCart();
 
   const [quantities, setQuantities] = useState<{ [key: number]: number }>(
@@ -66,7 +68,7 @@ export default function Cart({ showCart }: CartProps) {
           <p>TOTAL</p>
           <span>$ {totalPrice.toLocaleString()}</span>
         </div>
-        <button>CHECKOUT</button>
+        <button onClick={() => navigate("/checkout")}>CHECKOUT</button>
       </div>
     </div>
   );

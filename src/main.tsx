@@ -9,6 +9,7 @@ import Headphones from "./pages/Headphones";
 import Speakers from "./pages/Speakers";
 import Earphones from "./pages/Earphones";
 import Product from "./pages/Product";
+import Checkout from "./pages/Checkout";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -27,6 +28,10 @@ export default function App() {
     {
       path: "/earphones",
       element: <Earphones />,
+    },
+    {
+      path: "/checkout",
+      element: <Checkout />,
     },
     {
       path: "/:productname",

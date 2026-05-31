@@ -967,3 +967,178 @@ footer .bottom .right *{
   letter-spacing: 1px;
   cursor: pointer;
 }
+
+.checkout{
+  background-color: #F1F1F1;
+}
+
+.checkout .header{
+  height: 97px;
+}
+
+.checkout .back{
+  padding: 0 10%;
+  font-size: 15px;
+  opacity: 50%;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+.checkout-content{
+  padding: 0 10%;
+}
+
+.checkout .information{
+  height: 1126px;
+  width: 730px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+}
+
+.checkout .information h1{
+  font-size: 32px;
+  letter-spacing: 1.14px;
+  line-height: 36px;
+}
+
+.checkout .information span{
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.93px;
+  color: #D87D4A;
+  margin-bottom: 20px;
+}
+
+.checkout .information .billing{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout .information .infos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.checkout .information .info{
+  width: 309px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checkout .information .info p{
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: -0.21px;
+}
+
+.checkout .information .info input{
+  height: 56px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: transparent;
+  border: solid 1px #CFCFCF;
+  padding: 0 10%;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.25px;
+  caret-color: #D87D4A;
+}
+
+.checkout .information .info input::placeholder{
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.25px;
+}
+
+.checkout .information .info input:focus{
+  outline: none;
+  border: solid 1px #D87D4A;
+}
+
+.checkout .information .shipping-info{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout .information .shipping-info .address{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.checkout .information .shipping-info .address input{
+  padding: 0 5%;
+}
+
+.checkout .information .payment{
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout .information .payment .top{
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.checkout .information .payment .top .right{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout .information .payment .top .right .method{
+  height: 56px;
+  width: 309px;
+  border-radius: 8px;
+  border: solid 1px #CFCFCF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  gap: 20px;
+}
+
+.checkout .information .payment .top .right .method:hover{
+  border-color: #D87D4A;
+}
+
+.checkout .information .payment .top .right .method .check{
+  height: 20px;
+  width: 20px;
+  border: solid 1px #CFCFCF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout .information .payment .top .right .method .check .checked{
+  height: 10px;
+  width: 10px;
+  background-color: #D87D4A;
+  border-radius: 50%;
+}
+
+.payment .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment .bottom2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment .bottom2 p{
+  width: 554px;
+  opacity: 50%;
+  font-size: 15px;
+  line-height: 25px;
+}
